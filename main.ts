@@ -38,8 +38,12 @@ namespace IoT {
     /**
      * Make a serial connection between micro:bit and ESP8266.
      */
+    /**
+    //% blockId="ESP8266_connect" block="connect to ESP8266|TX %txPin|RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
+    //% txPin.defl=SerialPin.P15
+    //% rxPin.defl=SerialPin.P1
+    //% baudRate.defl=BaudRate.BaudRate115200
     //% weight=100
-    //% blockId="ESP8266_connect" block="connect to ESP8266"
     export function Initialize_ESP8266(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string): void {
         let result = 0
 
