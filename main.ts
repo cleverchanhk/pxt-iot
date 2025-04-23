@@ -44,6 +44,7 @@ namespace IoT {
     //% rxPin.defl=SerialPin.P1
     //% baudRate.defl=BaudRate.BaudRate115200
     //% weight=100
+    */
     export function Initialize_ESP8266(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string): void {
         let result = 0
 
