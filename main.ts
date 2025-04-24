@@ -111,13 +111,15 @@ namespace IoT {
             case HttpMethod.TRACE: myMethod = "TRACE";
         }
         // Establish TCP connection:
-        let data: string = "AT+CIPSTART=\"TCP\",\"" + host + "\"," + port
+        let data: string = "AT+CIPSTART=\"TCP\",\"" + host + "\"," + port.toString()
         writeToSerial(data, pauseBaseValue * 6)
         data = myMethod + " " + urlPath
         if (parameter_name_1 && parameter_name_1.length > 0) {
-            data += "&" + parameter_name_1 + "=" + parameter_1
+            data += "&" + parameter_name_1 + "=" + parameter_1.toString()
         }
-
+        if (parameter_name_2 && parameter_name_2.length > 0) {
+            data += "&" + parameter_name_2 + "=" + parameter_2.toString()
+        }
         data += " HTTP/1.1" + "\u000D" + "\u000A"
             + "Host: " + host + "\u000D" + "\u000A"
         // Send data:
